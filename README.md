@@ -57,6 +57,9 @@ Ensure you have the following libraries installed:
 
 3. Watch as the window displays the ray-traced scene with a rotating camera.
 
+Beware, even if you have a NVidia GPU your device might have a different structure! This code is tested on my 3060 TI, if you have a different device you might need to change the Architecture flag.
+Please refer to https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/ if you have a CUDA error. You can simply modify the Makefile with your GPU flag.
+
 ## Project Structure
 
 - `main.cc`: Main application file containing the GLFW loop and rendering logic.

@@ -32,7 +32,7 @@ Ensure you have the following libraries installed:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/ray-tracing-glfw.git
+    git clone https://github.com/OneHotEncoder01/raytracer/
     cd ray-tracing-glfw
     ```
 
@@ -42,24 +42,18 @@ Ensure you have the following libraries installed:
     cd build
     ```
 
-3. Compile the project using `CMake`:
-    ```sh
-    cmake ..
-    make
-    ```
-
 ### Running the Project
 
 1. After compiling, you can run the executable:
     ```sh
-    ./RayTracingGLFW
+    ./cppart
     ```
 
 2. If CUDA drivers are installed, the project will leverage GPU acceleration for rendering. If CUDA is not available, the CPU-based rendering will be used and the output will be saved to a PPM file.
 
 3. To redirect the output to a PPM file, run the executable with the following command:
     ```sh
-    ./RayTracingGLFW > output.ppm
+    ./cppart > output.ppm
     ```
 
     - On **Linux**, this will save the output image to `output.ppm`.

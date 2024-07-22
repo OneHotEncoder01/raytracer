@@ -33,7 +33,7 @@ Ensure you have the following libraries installed:
 1. Clone the repository:
     ```sh
     git clone https://github.com/OneHotEncoder01/raytracer/
-    cd ray-tracing-glfw
+    cd raytracer
     ```
 
 2. Create a `build` directory and navigate to it:

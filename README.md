@@ -15,6 +15,7 @@ This project is inspired by Peter Shirley's "Ray Tracing in a Weekend" and demon
 - OpenGL
 - GLFW
 - OpenMP (optional for parallel rendering)
+- CUDA (optional, for GPU-accelerated rendering)
 
 ## Getting Started
 
@@ -25,6 +26,7 @@ Ensure you have the following libraries installed:
 - OpenGL
 - GLFW
 - OpenMP (optional, for parallel processing)
+- CUDA (optional, for GPU-accelerated rendering)
 
 ### Compiling the Project
 
@@ -53,12 +55,24 @@ Ensure you have the following libraries installed:
     ./RayTracingGLFW
     ```
 
-2. When prompted, enter the number of spheres you want to render.
+2. If CUDA drivers are installed, the project will leverage GPU acceleration for rendering. If CUDA is not available, the CPU-based rendering will be used and the output will be saved to a PPM file.
 
-3. Watch as the window displays the ray-traced scene with a rotating camera.
+3. To redirect the output to a PPM file, run the executable with the following command:
+    ```sh
+    ./RayTracingGLFW > output.ppm
+    ```
 
-Beware, even if you have a NVidia GPU your device might have a different structure! This code is tested on my 3060 TI, if you have a different device you might need to change the Architecture flag.
-Please refer to https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/ if you have a CUDA error. You can simply modify the Makefile with your GPU flag.
+    - On **Linux**, this will save the output image to `output.ppm`.
+    - On **Windows**, the same command can be used in a Command Prompt or PowerShell to save the output.
+
+4. When prompted, enter the number of spheres you want to render.
+
+5. Watch as the window displays the ray-traced scene with a rotating camera.
+
+### CUDA Notes
+
+- If you encounter CUDA errors, ensure your CUDA drivers are correctly installed and your GPU architecture is properly set in the Makefile. Check [this guide](https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/) for GPU-specific settings.
+- Modify the Makefile to match your GPU architecture if necessary.
 
 ## Project Structure
 
